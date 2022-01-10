@@ -1,0 +1,206 @@
+/* 
+Design System
+- must be responsize
+01 Typography
+  --font size
+  1rem default == 16px
+  --font weight
+  Default: 400
+  Medium: 500
+  Semi-bold: 600
+  Bold: 700 
+  --line height
+  Default: 1
+  small: 1.05
+  medium: 1.2
+  <p> 1.6
+  Default 1
+02 Color
+  -main #e67e22
+  -gray #555 #333 
+  ligthest gray on backgroun#6f6f6f;
+  -tint  #fdf2e9 #fae5d3
+  -shade # #b8651b #cf711f
+  -accent #51cf66
+03 Images: unsplash, UI faces
+04 Icons
+05 Shadows
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+06 Border
+  border-radius: 0.9rem;
+  medium 11px
+07 Whitespace
+  -Spacing system
+  0.75px
+  -0.5px
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* does not work on safari write js*/
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: #555;
+  /* Only works if there is nothing absolutely positioned in relation to body */
+  overflow-x: hidden;
+}
+
+/*******************/
+/* GENERAL REUSE */
+/*******************/
+/* reuse to center any content */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  /* apply same padding to edges */
+  padding: 0rem 3.2rem;
+  /* background-color: #45260a; */
+}
+.flex {
+  display: flex;
+  justify-content: end;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 8.4rem;
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-center-v {
+  align-items: center;
+}
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+strong {
+  font-weight: 500;
+}
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 9.6rem;
+}
+
+.heading-primary {
+  font-size: 5.1rem;
+  line-height: 1.05;
+  margin-bottom: 4rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #555;
+}
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+.btn,
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+
+  font-size: 2rem;
+  font-weight: 500;
+
+  padding: 1.3rem 3rem;
+  border-radius: 0.9rem;
+  display: inline-block;
+  /* for cta */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  background-color: #b8651b;
+  /* font-weight: 500; */
+}
+
+.btn-outline:link,
+.btn-outline:visited {
+  /* background-color: #fae5d3; */
+  color: #cf711f;
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+  background-color: #fae5d3;
+  box-shadow: 0 0 0 3px #e67e22;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fae5d3;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fae5d3;
+  color: #555;
+}
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.3rem rgba(230, 125, 34, 0.37);
+}
+
+/* alison */
